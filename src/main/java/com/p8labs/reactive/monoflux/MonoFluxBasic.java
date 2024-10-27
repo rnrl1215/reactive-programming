@@ -1,7 +1,7 @@
 package com.p8labs.reactive.monoflux;
 
-import io.netty.handler.codec.spdy.SpdyWindowUpdateFrame;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -10,10 +10,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-@Component
-public class MonoFlux {
+@Service
+public class MonoFluxBasic {
 
-    public List<String> FluxReturnStringList() {
+    public List<String> fluxEx1() {
         List<String> copyList = new ArrayList<>();
         List<String> originList = Arrays.asList("foo", "bar", "foobar");
         Flux<String> seq2 = Flux.fromIterable(originList);
@@ -22,7 +22,7 @@ public class MonoFlux {
     }
 
 
-    public List<String> FluxEx2ReturnListWithError() {
+    public List<String> fluxEx2() {
         List<String> copyList = new ArrayList<>();
         List<String> originList = Arrays.asList("foo", "bar", "foobar");
         Flux<String> seq2 = Flux.fromIterable(originList);
@@ -36,10 +36,18 @@ public class MonoFlux {
         return copyList;
     }
 
-    public List<String> MonoEx() {
+    public List<String> monoEx1() {
         List<String> copyList = new ArrayList<>();
         Mono<String> mono = Mono.just("foo");
         mono.subscribe(copyList::add);
+        String string = mono.block();
         return copyList;
     }
+
+    public String fluxEx3() {
+        List<String> originList = Arrays.asList("foo", "bar", "foobar");
+        Flux<String> seq2 = Flux.fromIterable(originList);
+        return seq2.blockFirst();
+    }
+
 }
