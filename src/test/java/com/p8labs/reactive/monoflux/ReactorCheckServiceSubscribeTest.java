@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FluxSubscribeTest
+class ReactorCheckServiceSubscribeTest
 {
     private FluxSubscribe fluxSubscribe = new FluxSubscribe();
 
