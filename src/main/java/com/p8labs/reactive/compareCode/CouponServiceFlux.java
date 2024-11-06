@@ -1,5 +1,6 @@
 package com.p8labs.reactive.compareCode;
 
+import com.p8labs.reactive.entity.Member;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

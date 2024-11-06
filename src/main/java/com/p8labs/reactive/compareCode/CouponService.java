@@ -1,5 +1,6 @@
 package com.p8labs.reactive.compareCode;
 
+import com.p8labs.reactive.entity.Member;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

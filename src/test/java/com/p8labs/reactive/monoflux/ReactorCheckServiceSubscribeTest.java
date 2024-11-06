@@ -1,6 +1,9 @@
 package com.p8labs.reactive.monoflux;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -35,5 +38,16 @@ class ReactorCheckServiceSubscribeTest
     @Test
     void sub4Ex() {
         fluxSubscribe.sub4ex();
+    }
+
+    @Test
+    void sub5Ex() {
+        fluxSubscribe.sub5ex();
+    }
+
+    @Test
+    void onError() {
+        List<Integer> returnedList = fluxSubscribe.onError();
+        Assertions.assertThat(returnedList.size()).isEqualTo(3);
     }
 }
