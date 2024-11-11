@@ -28,6 +28,7 @@ public class MemberRepository {
         } else if (id == 2) {
             reward = 200;
         }
+
         return reward;
     }
 
