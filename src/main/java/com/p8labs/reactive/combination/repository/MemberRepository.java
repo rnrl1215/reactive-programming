@@ -21,6 +21,7 @@ public class MemberRepository {
 
     public Integer findRewardByGrade(long id) throws InterruptedException {
         log.info("Finding reward ...");
+
         Thread.sleep(2000L);
         int reward = 100;
         if (id == 1) {
