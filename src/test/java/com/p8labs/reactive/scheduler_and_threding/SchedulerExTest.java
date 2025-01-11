@@ -8,7 +8,7 @@ class SchedulerExTest {
     private SchedulerEx ex = new SchedulerEx();
 
     @Test
-    void test() {
+    void test() throws InterruptedException {
         ex.scheduler();
     }
 }
