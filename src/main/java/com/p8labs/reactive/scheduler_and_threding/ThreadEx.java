@@ -24,11 +24,15 @@ public class ThreadEx {
 
     public void testFluxInMultyThread() throws InterruptedException {
 
-        Scheduler scheduler = Schedulers.newParallel("parallel-scheduler", 4);
+        Scheduler scheduler = Schedulers.newParallel("parallel-scheduler", 3);
+        Scheduler scheduler2 = Schedulers.single();
+        Scheduler scheduler3 = Schedulers.boundedElastic();
+        Scheduler scheduler4 = Schedulers.immediate();
 
         final Flux<String> flux = Flux.just("FIRST ","SECOND ","THIRD ");
 
-        flux.map(msg -> {
+        flux.parallel().runOn(scheduler4)
+                .map(msg -> {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
