@@ -1,4 +1,4 @@
-package com.p8labs.reactive.scheduler_and_threding;
+package com.p8labs.reactive.schedulerThreading;
 
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;

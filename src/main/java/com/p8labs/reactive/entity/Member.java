@@ -7,21 +7,17 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
-public class Member
+public class Member extends MemberCommon
 {
     private Long id;
     private String grade;
     private Integer point;
     private LocalDateTime registerDttm;
-    private Integer reward;
 
-    public Member(String grade, Integer point, LocalDateTime registerDttm) {
+    public Member(Long id, String grade, Integer point, LocalDateTime registerDttm) {
         this.grade = grade;
         this.point = point;
         this.registerDttm = registerDttm;
-    }
-
-    public void updateId(long id) {
         this.id = id;
     }
 

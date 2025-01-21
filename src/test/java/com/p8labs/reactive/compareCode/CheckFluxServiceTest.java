@@ -18,7 +18,7 @@ class CheckFluxServiceTest {
 
     @Test
     void checkBlocking() {
-        Member member = new Member("GOLD",
+        Member member = new Member(1L, "GOLD",
                                      500,
                                            LocalDateTime.of(2010,11,11,10,10));
 
@@ -37,7 +37,7 @@ class CheckFluxServiceTest {
 
     @Test
     void checkMonoBlocking() {
-        Member member = new Member("GOLD",
+        Member member = new Member(1L, "GOLD",
                 500,
                 LocalDateTime.of(2010,11,11,10,10));
 
@@ -56,7 +56,7 @@ class CheckFluxServiceTest {
 
     @Test
     void checkMono() {
-        Member member = new Member("GOLD",
+        Member member = new Member(1L, "GOLD",
                 500,
                 LocalDateTime.of(2010,11,11,10,10));
 

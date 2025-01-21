@@ -14,8 +14,7 @@ public class MemberRepository {
         log.info("Finding member ...");
         Thread.sleep(2000L);
         if (id > 4) return null;
-        Member member = new Member("GOLD", 500, LocalDateTime.now());
-        member.updateId(id);
+        Member member = new Member(id, "GOLD", 500, LocalDateTime.now());
         return member;
     }
 

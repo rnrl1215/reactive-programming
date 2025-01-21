@@ -1,4 +1,4 @@
-package com.p8labs.reactive.scheduler_and_threding;
+package com.p8labs.reactive.schedulerThreading;
 
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
