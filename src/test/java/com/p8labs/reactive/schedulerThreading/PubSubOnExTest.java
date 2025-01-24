@@ -15,11 +15,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
 class PubSubOnExTest {
 
     private PubSubOnEx pubSubOnEx = new PubSubOnEx();
-
 
     @Test
     void test1() {
@@ -62,6 +60,7 @@ class PubSubOnExTest {
     }
 
 
+    // TODO: 공통으로 변경
     List<Member> getTestMembers() {
 
         Member member1 = new Member(1L, "GOLD", 10, LocalDateTime.now());
