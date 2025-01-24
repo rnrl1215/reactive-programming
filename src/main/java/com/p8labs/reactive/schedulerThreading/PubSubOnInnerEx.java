@@ -38,9 +38,9 @@ public class PubSubOnInnerEx {
         Flux<Member> memberFlux2 = Flux.fromIterable(members2);
         Flux<Flux<Member>> memberInnerFlux = Flux.just(memberFlux1, memberFlux2);
 
-        Scheduler scheduler1 = Schedulers.newSingle("first-schd");
-        Scheduler scheduler2 = Schedulers.newSingle("second-schd");
-        Scheduler scheduler3 = Schedulers.newSingle("third-schd");
+        Scheduler scheduler1 = Schedulers.newParallel("first-schd");
+        Scheduler scheduler2 = Schedulers.newParallel("second-schd");
+        Scheduler scheduler3 = Schedulers.newParallel("third-schd");
 
         return memberInnerFlux.map(
                 flux -> {
