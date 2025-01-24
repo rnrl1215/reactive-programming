@@ -61,7 +61,7 @@ public class PubSubOnInnerEx {
 
     public boolean checkGradeAndIsBanned(Member m, String grade) {
         try {
-            System.out.println("FILTER THREAD " + Thread.currentThread().getName() + "Member ID: " + m.getId());
+            System.out.println("FILTER THREAD " + Thread.currentThread().getName() + " Member ID: " + m.getId());
             if (m == null) return false;
             Thread.sleep(1000);
             return MemberFilter.checkBannedAndGrade(grade).test(m);
