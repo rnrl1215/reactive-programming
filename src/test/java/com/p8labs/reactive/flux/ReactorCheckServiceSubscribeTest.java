@@ -1,11 +1,9 @@
-package com.p8labs.reactive.monoflux;
+package com.p8labs.reactive.flux;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ReactorCheckServiceSubscribeTest
 {
