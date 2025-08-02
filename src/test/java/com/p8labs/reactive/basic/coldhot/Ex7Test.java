@@ -11,7 +11,7 @@ class Ex7Test {
     Ex7 ex7;
 
     @Test
-    void testEx1() {
+    void testEx1() throws InterruptedException {
         ex7.ex1();
     }
 

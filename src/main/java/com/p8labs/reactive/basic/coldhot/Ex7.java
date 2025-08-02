@@ -13,13 +13,14 @@ import java.util.UUID;
 @Service
 public class Ex7 {
 
-    void ex1() {
+    void ex1() throws InterruptedException {
         Flux<String> coldFlux
                 = Flux.fromIterable(List.of("A", "B", "C", "D"))
                 .map(String::toLowerCase);
 
         coldFlux.subscribe(alpha -> log.info("#Sub1: {}", alpha));
 
+        Thread.sleep(2500);
         log.info("---------------------------------------------------");
 
         coldFlux.subscribe(alpha -> log.info("#Sub2: {}", alpha));
