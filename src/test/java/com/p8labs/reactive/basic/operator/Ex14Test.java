@@ -21,4 +21,19 @@ class Ex14Test {
     public void ex7() throws InterruptedException {
         ex14.ex7();
     }
+
+    @Test
+    public void ex9() throws InterruptedException {
+        ex14.ex9();
+    }
+
+    @Test
+    public void ex10() throws InterruptedException {
+        ex14.ex10();
+    }
+
+    @Test
+    public void ex12() throws InterruptedException {
+        ex14.ex12();
+    }
 }
